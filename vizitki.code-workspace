@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../vizitki"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vizitki"
+	}
+}

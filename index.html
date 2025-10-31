@@ -13,15 +13,16 @@
 </head>
 <body>
     <div class="container">
-        <h2>Депозитный калькулятор</h2>
+        <h2 class="text-center mb-5">Депозитный калькулятор</h2>
         <form>
             <div class="row">
-                <div class="col">
+                <div class="col" style="text-align: right;">
                     <p>Первоначальный депозит</p>
                     <p>Срок вклада</p>
-                    <p>Годовая процентная ставка</p>
-                    <p><strong>Было:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Станет:</strong></p>
-                    <p><span id="sum1"> </span> <span id="sum2"> </span></p>
+                    <p>Годовая процентная ставка</p><br>
+                    <p ><strong>Было:</strong></p>
+                    <p ><span id="sum1"> </span> </p>
+                    <div style="background-color: green;width:40px; height:120px; float:right"></div>
                 </div>
                 <div class="col">
                     <p><input id="depozit" type="text" value="100000"></p>
@@ -35,9 +36,14 @@
 </select>
                     </p>
                     <p><input id="stavka" type="text" value="13"></p>
+                   
+                    <p><strong>Станет:</strong></p>
+                    <p><span id="sum2"> </span></p>
+                      <div id="before_height" style="background-color: red;width:40px; height:0px;"></div>
                 </div>
             </div>
         </form>
+        
     </div>
    <script src="script.js"></script> 
 </body>
