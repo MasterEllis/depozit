@@ -10,7 +10,7 @@ stavka.oninput=calculateDepozit;
 
 function calculateDepozit(){
     
-    console.log(depozit.value)
+    // console.log(depozit.value)
     let sum1=depozit.value;
     let bylo=document.getElementById("sum1")
     bylo.innerHTML=sum1
@@ -19,4 +19,26 @@ function calculateDepozit(){
     stanet.innerHTML=sum2
     document.getElementById("before_height").style.height=(sum2/sum1)*120+"px";
 }
-calculateDepozit()
+calculateDepozit();
+
+
+const posts=document.querySelector(".post-container");
+//  const title=document.querySelector(".post-container h3");
+//  const body =document.querySelector(".post-container span");
+fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => {
+        console.log(response)
+        return response.json()})
+      .then(data => {
+        for (d of data)
+        addPost(d.title,d.body)}) 
+     
+function addPost(t,b){
+  const title=document.createElement('h3')
+  const body = document.createElement('span')
+  const postItem=document.createElement('p')
+  title.innerHTML=t
+  body.innerHTML=b
+  postItem.append(title,body)
+  posts.append(postItem)
+}      
